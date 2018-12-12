@@ -1,0 +1,53 @@
+.NavbarKategori { 
+    display: flex;
+
+    ul li {
+        display: inline;
+        color: #D4D4D4;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        font-size: 0.8em;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+        width: fit-content;
+        // background: red;
+
+        &:hover {opacity: .6;}
+    }
+
+    ul li a {
+        color: #D4D4D4;
+        text-decoration: none;
+
+        &:visited {
+            color: #D4D4D4;
+        }
+
+        &:active {
+            color: #1D86EF;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .NavbarKategori {
+        background: black;
+        // background: #323232;
+        // margin-top: 16rem;
+        // margin-left: -6rem;
+        // padding-top: 1rem;
+        // padding-bottom: 1rem;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 2.8rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+
+        ul li {
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+}

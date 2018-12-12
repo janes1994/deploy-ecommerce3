@@ -1,0 +1,129 @@
+.NavbarShowCart {
+    width: 25vw;
+    min-height: 24rem;
+    background: rgb(219, 219, 219);
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    box-sizing: border-box;
+    padding: .8rem;
+    z-index: 99;
+
+    .cart-belanja {
+
+        .belanja-kosong {
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: normal;
+        }
+
+        .belanja-ada2 {
+            
+            .belanja-ada-content2 {
+                height: 100px;
+                // border: 1px solid black;
+                display: flex;
+                align-items: center;
+                // justify-content: space-evenly;
+
+                img.belanja-ada-img {
+                    max-width: 75px;
+                    max-height: 75px;
+                    // border: 1px solid black;
+                    box-sizing: border-box;
+                }
+
+                span.belanja-ada-judul2 {
+                    font-size: .7rem;
+                    width: 50%;                    
+                    margin-left: 12px;
+                }
+            }
+
+            .button-checkout2 {
+                height: 30px;
+                background: rgb(82, 150, 228);
+                color: whitesmoke;
+                border-radius: 8px;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;                
+                font-size: .9rem;
+                margin-top: 8px;
+            }
+        }
+
+        .belanja-ada {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "img title"
+            "button button";
+            // border: 1px solid black;
+
+            img {
+                max-width: 75px;
+                grid-area: img;
+                justify-content: center;
+                // border: 1px solid black;
+            }
+
+            span.belanja-ada-judul {
+                font-size: .8rem;
+                grid-area: title;
+                // border: 1px solid black;
+                
+            }
+
+            .button-checkout {
+                grid-area: button;
+                height: 30px;
+                background: rgb(82, 150, 228);
+                color: whitesmoke;
+                border-radius: 8px;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;                
+                font-size: .9rem;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .cart-kategori {
+        position: relative;
+        // top: 10em;
+        padding: 1rem;
+
+        ul {
+            list-style-type: none;
+
+            li {
+                color: rgb(71, 110, 238);
+                margin: .5rem;
+                font-size: .9rem;
+                // padding-left: 1rem;
+                
+                a {
+                    text-decoration: none;
+                    color: rgb(71, 110, 238);
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    // padding-top: 8px;
+                }
+            }
+        }
+
+        hr {
+            border-bottom: none;
+            border-color: rgb(243, 243, 243);
+        }
+    }
+}
+

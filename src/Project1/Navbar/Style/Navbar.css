@@ -1,0 +1,109 @@
+.Navbar {
+  width: 100%;
+  height: 2.5rem;
+  background: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar .logo img, .Navbar .search img, .Navbar .cart img {
+  width: 28px;
+  height: 28px;
+}
+
+.Navbar .kategori {
+  display: none;
+}
+
+.Navbar .kategori ul li {
+  display: inline;
+  color: #D4D4D4;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.Navbar .search {
+  margin-right: 3rem;
+}
+
+.Navbar .search input {
+  display: block;
+}
+
+.Navbar .burger {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.Navbar .burger:hover {
+  opacity: .8;
+}
+
+.Navbar .burger .bar1, .Navbar .burger .bar2, .Navbar .burger .bar3 {
+  width: 20px;
+  height: 2px;
+  margin: 6px 0;
+  background: whitesmoke;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.Navbar .burger .bar1.bar1.change, .Navbar .burger .bar2.bar1.change, .Navbar .burger .bar3.bar1.change {
+  -webkit-transform: rotate(-45deg) translate(-50%, 50%);
+          transform: rotate(-45deg) translate(-50%, 50%);
+}
+
+.Navbar .burger .bar1.bar2.change, .Navbar .burger .bar2.bar2.change, .Navbar .burger .bar3.bar2.change {
+  opacity: 0;
+}
+
+.Navbar .burger .bar1.bar3.change, .Navbar .burger .bar2.bar3.change, .Navbar .burger .bar3.bar3.change {
+  -webkit-transform: rotate(45deg) translate(-50%, -50%);
+          transform: rotate(45deg) translate(-50%, -50%);
+}
+
+@media (min-width: 766px) {
+  .Navbar .burger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .Navbar .kategori {
+    display: block;
+    position: absolute;
+    background: #323232;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+  .Navbar .kategori ul li {
+    display: block;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .Navbar .search img {
+    display: block;
+    position: relative;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

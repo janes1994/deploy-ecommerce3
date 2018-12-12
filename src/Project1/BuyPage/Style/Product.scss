@@ -1,0 +1,82 @@
+.buy-product {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.buy-image{
+    max-width: 40vw;
+    // height: 65vh;
+    // border: 1px solid black;
+    text-align: end;
+    align-items: center;
+    // box-sizing: border-box;
+
+    img {
+        max-width: 40vw;
+        padding: 1rem auto; 
+        // border: 1px solid black;
+    }
+}
+
+.buy-description {
+    padding: 1rem;
+    // border: 1px solid black;
+    width: 48vw;
+    height: 65vh;
+    padding-left: 8rem;
+    box-sizing: border-box;
+
+    .buy-product-kateogri {
+        font-size: .7rem;
+        color: #1B50FF;
+        margin-bottom: 1rem;
+    }
+
+    .buy-product-title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .buy-product-harga {
+        font-size: .9rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .buy-product-spec {
+        font-size: .7rem;
+        max-width: 50%;
+        margin-bottom: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .buy-button-cart,
+    .buy-button-wish {
+        padding: .7rem 1.5rem;
+        background: #EAEAEA;
+        width: fit-content;
+        font-size: .7rem;
+        border-radius: 8px;
+        margin: 2rem 1rem;
+        cursor: pointer;
+
+        &:hover {opacity: .9}
+    }
+
+    a {
+        text-decoration: none;
+        // color: #EAEAEA;
+    }
+
+    .buy-button-wish {
+        background: #2D2D2D;
+        color:whitesmoke;
+    }
+}

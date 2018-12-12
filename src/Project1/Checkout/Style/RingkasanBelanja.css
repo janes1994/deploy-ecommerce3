@@ -1,0 +1,89 @@
+.ringkasan-belanja {
+  position: absolute;
+  right: 3rem;
+  border: 1px solid #838383;
+  padding: .8rem;
+  margin-top: 1rem;
+  width: 25vw;
+}
+
+.ringkasan-title {
+  font-size: .8rem;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: .6px solid black;
+  padding: 6px;
+}
+
+.ringkasan-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #838383;
+  padding: .8rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #838383;
+  -webkit-box-pack: first baseline;
+      -ms-flex-pack: first baseline;
+          justify-content: first baseline;
+}
+
+.ringkasan-content img {
+  max-width: 70px;
+  max-height: 70px;
+  margin-right: 8px;
+}
+
+.ringkasan-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ringkasan-desc .ringkasan-desc-title {
+  font-size: .7rem;
+}
+
+.ringkasan-desc .ringkasan-desc-harga {
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.ringkasan-desc .ringkasan-desc-hapus {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 6px;
+  padding: 4px 18px;
+  background: #e92727;
+  color: whitesmoke;
+  font-size: .6rem;
+  cursor: pointer;
+}
+
+.ringkasan-desc .ringkasan-desc-hapus:hover {
+  opacity: .9;
+}
+
+.ringkasan-total {
+  font-size: .8rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: bold;
+}
+/*# sourceMappingURL=RingkasanBelanja.css.map */

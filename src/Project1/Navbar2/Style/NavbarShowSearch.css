@@ -1,0 +1,43 @@
+.NavbarShowSearch .closeSearch {
+  width: 28px;
+  height: 28px;
+}
+
+.NavbarShowSearch input[type=text] {
+  width: 50vw;
+  height: 2rem;
+  border: none;
+  background: #323232;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  color: aliceblue;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.NavbarShowSearch input[type=text]::-webkit-input-placeholder {
+  color: #b6b6b6;
+  font-size: 1rem;
+}
+
+.NavbarShowSearch input[type=text]:-ms-input-placeholder {
+  color: #b6b6b6;
+  font-size: 1rem;
+}
+
+.NavbarShowSearch input[type=text]::-ms-input-placeholder {
+  color: #b6b6b6;
+  font-size: 1rem;
+}
+
+.NavbarShowSearch input[type=text]::placeholder {
+  color: #b6b6b6;
+  font-size: 1rem;
+}
+
+.NavbarShowSearch input[type=text]:focus {
+  outline: none;
+}
+/*# sourceMappingURL=NavbarShowSearch.css.map */

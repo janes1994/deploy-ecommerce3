@@ -1,0 +1,108 @@
+.homepage-image img{
+    width: 100%;
+    height: 80vh;
+}
+
+.homepage-content {
+    position: relative;
+
+    h1 {
+        cursor: pointer;
+        opacity: .5;
+        transition: .3s ease-in-out;
+
+        &:hover {opacity: 1;}
+    }
+}
+
+.homepage-image {
+}
+
+.homepage-desc {
+    position: absolute;
+    text-align: center;
+}
+
+.homepage-desc h1 {color: whitesmoke;}
+
+.homepage-desc h3 {color: whitesmoke;}
+
+.homepage-desc-1 {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    transform: translate(-35%, -20%);
+}
+
+.homepage-desc-1 h1 {
+
+}
+
+.homepage-desc-1 h3 {
+    color: #C40B1A;
+}
+
+.homepage-content-2 {
+    background: #000000;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+
+    .homepage-image img {
+        width: 75vw;
+        height: 75vh;
+        margin: 3rem auto;
+        // text-align: center;
+        // padding: 3em 0;
+    }
+}
+
+.homepage-content-2 .homepage-desc {
+    h1 {
+        color: #9BF117;
+    }
+}
+
+// Setengah view
+.homepage-halfpage {
+    width: 45%;
+    max-height: 90vh;
+    display: inline-flex;
+    text-align: center;
+    padding: 1rem;
+    justify-content: space-around;
+
+    .homepage-desc {
+        h3 {
+            color: #000000; 
+            opacity: 1;
+        }
+        h1 {
+            color: #C40B1A; 
+            opacity: 1;
+
+            &:hover{color: #000000;}
+        }
+    }
+
+    .homepage-image {
+        margin-top: 4rem;
+
+        img {
+            max-width: 500px;
+            max-height: 450px;
+        }
+    }
+}
+
+a {text-decoration: none;}
+
+// .home-buy {
+//     color: rgb(82, 150, 228);
+//     cursor: pointer;
+
+//     .homepage-1 {
+//         justify-content: center;
+//     }
+// }

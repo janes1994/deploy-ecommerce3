@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F1F1F1;
+    padding: 1rem;
+
+    .footer-socmed {
+        img {
+            width: 30px; height: 30px; 
+            margin-left: 1rem; margin-right: 1rem;
+        }
+    }
+
+    .footer-content {
+        span {
+            font-size: .8rem;
+            margin-left: 3rem; margin-right: 3rem;
+            font-weight: bold;
+        }
+    }
+    .footer-copyright {
+        span {
+            color: rgb(36, 36, 36);
+            padding-bottom: -3rem;
+            font-size: .7rem;
+        }
+    }
+}

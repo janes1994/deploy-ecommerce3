@@ -1,0 +1,420 @@
+1. API
+2. Guides
+3. Example
+
+========================================================================
+API
+
+1. <BrowserRouter>
+- basename: string
+- getUserConfirmation: func
+- forceRefresh: bool
+- keyLength: number
+- children: node
+
+2. <HashRouter>
+- basename: string
+- getUserConfirmation: func
+- hashType: string
+- children: node
+
+3. <Link>
+to: string
+to: object
+replace: bool
+innerRef: function
+others
+
+4. <NavLink>
+activeClassName: string
+activeStyle: object
+exact: bool
+strict: bool
+isActive: func
+location: object
+ariaCurrent: string
+
+5. <Prompt>
+
+6. <MemoryRouter>
+initialEntries: array
+initialIndex: number
+getUserConfirmation: func
+keyLength: number
+children: node
+
+7. <Redirect>
+to: string
+to: object
+push: bool
+from: string
+exact: bool
+strict: bool
+
+8. <Route>
+Route render methods
+Route props
+component
+render: func
+children: func
+pathL string | string[]
+exact: bool
+strict: bool
+location: object
+sensitive: bool
+
+9. <Router>
+history: object
+children: node
+
+10. <StaticRouter>
+basename: string
+location: string
+location: object
+context: object
+children: node
+
+11. <Switch>
+location: object
+children: node
+
+12. history
+history is mutable
+
+13. location
+
+14. match
+null matches
+
+15. matchPath
+pathname
+props
+
+16. withRouter
+Component.WrappedComponent
+wrappedComponentRef: func
+
+========================================================================
+
+Guides
+
+1. Quick start
+
+contoh: Basic Routing
+
+import React from 'react'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+
+const Index = () => <h1>Home</h1>
+const About = () => <h1>About</h1>
+const Users = () => <h1>Users</h1>
+
+class App extends React.Component {
+  render() {
+    return (
+      <Router>  
+      <div>
+        <h1>Halo</h1>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about/">About</Link></li>
+            <li><Link to="/users/">Users</Link></li>
+          </ul>
+        </nav>
+
+        <Route path="/" exact component={Index}/>
+        <Route path="/about/" exact component={About}/>
+        <Route path="/users/" exact component={Users}/>
+      </div>
+      </Router>
+    )
+  }
+}
+
+export default App;
+
+
+contoh: Nested Routing
+
+2. Basic Components
+Terdapat tiga jenis komponen pada React Router:
+
+- Routers components
+  <BrowserRouter>
+  <HashRouter>
+
+- Route matching
+  <Route>
+    - component
+    - render
+    - children
+  <Switch>
+
+- Navigation
+  <Link>
+  <NavLink>
+  <Redirect>
+
+- Routers components
+<BrowserRouter>
+Jika kita memiliki server yang merespon request
+
+<HashRouter>
+Jika menggunakan file server statis
+
+contoh:
+import {BrowserRouter, Route, Link} from 'react-route-dom'
+
+render(
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>
+)
+
+
+- Route matching
+<Route> dan <Switch>
+
+Route matching digunakan dengan membandingkan prop path
+<Route> untuk lokasi pathname saat ini. Saat sebuah <Route> 
+sesuai dengan kontendan saat tidak cocok akan merender null.
+<Route> tanpa path akan selalu cocok.
+
+Kita dapat memasukan <Route> dimanapun kita ingin render
+content berdasarkan dari lokasi. 
+Disarankan untuk membuat daftar <Route> berdampingan 
+satu sama lain.
+
+<Switch>
+Digunakan untuk mengroup <Route>.
+<Switch> tidak diwajibkan untuk grouping <Route>, tapi 
+seringkali berguna. <Switch> akan iterasi seluruh children
+elemen <Route> dan hanya merender pertama yang cocok untuk 
+location saat ini. Ini membantu saat lebih dari satu route path
+cocok dengan pathname yang sama, saat menganimasikan transisi
+antar routes, dan dalam identifikasi saat tidak ada route yang cocok
+dengan location saat ini (jadi kita dapat merender component 404)
+
+contoh:
+import {Route, Switch} from "react-router-dom";
+
+// saat location = {pathname: '/about'}
+<Route path='/about' component={About} /> // renders <About/>
+<Route path='/contact' component={Contact} /> // renders <Contact/> // render null
+<Route component={Always} /> // render <Always/>
+
+<Switch>
+  <Route exact path="/" component={Home} />
+  <Route path="/about" component={About} />
+  <Route path="/contact" component={Contact} />
+</Switch>
+
+<Switch>
+  <Route exact path="/" />
+  <Route path="/about" component={About} />
+  <Route path="/contact" component={Contact} />
+  {/* saat tidak ada satupun diatas yang cocok, <NoMatch> akan diremder */}
+  <Route component={NoMatch} />
+</Switch>
+
+- Route Rendering props
+Kita memiliki tiga pilihan prop untuk bagaimana kita merender sebuah 
+komponen untuk <Route> yang diberikan: component, render, dan children.
+Untuk lebih lengkapnya dapat dilihat pada bagian API <Route>, namun
+disini kita akan fokus dengan component dan render karena keduanya yang
+akan sering digunakan.
+
+contoh:
+const Home = () => <div>Home</div>
+
+const App = () => {
+  const someVariable = true;
+
+  return (
+    <Switch>
+      {/* ini contoh yang baik */}
+      <Route exact path="/" component={Home} />
+      <Route 
+        path="/about" 
+        render={props => <About {...props} extra={someVariable} />} 
+      />
+      {/* jangan lakukan ini */}
+      <Route
+        path="/contact"
+        component={props => <Contact {...props extra={someVariable}} />}
+      />
+    </Switch>
+  )
+}
+
+component harus digunakan saat kita memiliki component yang sudah ada 
+(React.Component ataupun stateless functional component) yang ingin kita 
+render.
+
+- Navigation
+contoh:
+<Link to="/">Home</Link>
+// <a href="/">Home</a>
+
+// location = {pathname: '/react'}
+<NavLink to="/react" activeClassName="hurray">
+  React
+</NavLink>
+// <a href="/react" className="hurray">React</a>
+
+<Redirect to="/login" />
+
+penjelasan:
+React Router menyediakan komponen <Link> untuk membuat link pada app.
+Dimanapun kita merender <Link>, tag <a> akan dirender dalam app HTML.
+
+<NavLink> adalah jenis khusu yang dapat digunakan untuk style sebagai
+"active' saat prop sesuai dengan lokasi saat ini.
+
+Kapanpun kita ingin memaksakan navigasi, kita dapat render <Redirect>.
+Saat render <Redirect>, dia akan navigasi menggunakan prop.
+
+3. Server Rendering
+Merender dalam server sedikit berbeda karena dia seluruhnya stateless.
+Ide dasarnya adalah kita membungkus app dalam <StaticRouter> dan bukan
+<BrowserRouter>. Kita memberikan url yang direquest dari server jadi 
+routes dapat mencocokan dan sebuah prop context akan didiskusikan selanjutnya.
+
+contoh:
+// client
+<BrowserRouter>
+  <App/>
+</BrowserRouter>
+
+// server (not the complete story)
+<StaticRouter
+  location={req.url}
+  context={context}
+>
+  <App/>
+</StaticRouter>
+
+const context = {};
+const markup = ReactDOMServer.renderToString(
+  <StaticRoute
+    location={req.url}
+    context={context}
+  >
+    <App/>
+  </StaticRoute>
+)
+
+if (context.url) {
+  // Somewhere a `<Redirect>` was rendered
+  redirect(301, context.url);
+} else {
+  // we're good, send the response
+}
+
+Saat kita render <Redirect> pada client, browser history mengganti state
+dan mita mendapatkan tampilan baru. dalam environment static kita tidak
+dapat merubah state dari app. Daripadanya, kita menggunakan prop context
+untuk menemukan hasil dari yang dirender. Jika kita menemukan context.url,
+lalu kita mengetahui app redirected. ini mengizinkan kita untuk mengirimkan
+redirect yang sesuai dari server.
+
+- Menambahkan app spesific context information
+Router hanya menambhakan context.url. Tapi mungkin kita ingin beberapa
+redirect menjadi 301 atau 302. Atau mungkin mengirimkan response 404
+jika beberapa branch spesific dari UI dirender, atau 401 jika tidak sah.
+prop context adalah milik kita, jadi kita dapat merubahnya.
+Berikut cara membedakan redirect antara 301 dan 302 
+
+contoh:
+const RedirectWithStatus = ({from, to, status}) => (
+  <Route
+    render={({staticContext}) => {
+      // tidak terdapat `staticContext` pada client, jadi
+      // kita harus menjaganya dari sini
+      if (staticContext) staticContext.status = status;
+      return <Redirect from={from} to={to} />
+    }}
+  />
+)
+
+// Somewhere in your app
+const App = () => (
+  <Switch>
+    {/* some other routes */}
+    <RedirectWithStatus status={301} from="/users" to="/profiles" />
+    <RedirectWithStatus status={302} from="/courses" to="/profiles" />
+  </Switch>
+)
+
+// pada server
+const context = {};
+
+const markup = ReactDOMServer.renderToString(
+  <StaticRouter context={context}>
+    <App/>
+  </StaticRouter>
+)
+
+if (context.url) {
+  // dapat menggunakan `context.status` 
+  // yang kita tambahkan pada RedirectWithStatus
+  redirect(context.states, context.url);
+}
+
+4. Scroll Restoration
+Pada versi awal dari React Router kita menyediakan dukungan 
+out-of-the-box untuk scroll restoration dan orang2 terus 
+menanyakannya sampai saat ini. Semoga document ini membantu 
+untuk mendapatkan yang kamu butuhkan dalam scroll bar dan
+routing!
+
+Browser adalah awal untuk menangani scroll restoration dengan
+history.pushState dengan cara yang sama dia menangani dengan
+navigasi normal browser. Ini telah bekerka dalam chrome.
+
+Karena browser adalah permulaan untuk menangin "kasus default"
+dan app memiliki banyak kebutuhan scrollung, kita tidak 
+membawakannya dengan default scroll management.
+Guide ini seharusnya membantu kita dalam implementasi scrolling
+apapun yang kita butuhkan
+
+- Scroll to top
+contoh:
+class Scroll
+
+- Generic Solution
+Untuk solusi umum (dan apa yang browser awali untuk implementasi 
+secara native) kita akan membicarakan mengenai dua hal:
+
+1. Scroll up pada navigasi jadi kita tidak perlu memulai layar baru
+scroll ke bawah
+
+2. Mengembalikan posisi scroll pada window dan overflow element pada 
+klik "back" dan "forward" (tapi bukan klik link)
+
+Pada satu titik kita menginginkan untuk memberikan sebuah API yang 
+umum. 
+
+contoh:
+<Route>
+  <ScrollRestoration>
+    <div>
+      <h1>App</h1>
+
+      <RestoredScroll id="bunny">
+        <div style={{height: "200px", overflow: "auto"}}>I will overflow</div>
+      </RestoredScroll>
+    </div>
+  </ScrollRestoration>
+</Route>
+
+Pertama, ScrollRestoration akan scroll window keatas pada navigasi.
+Kedua, dia akan menggunakan location.key untuk menyimpan posisi scroll
+window dan posisi scroll dari komponen RestoredScroll ke sessionStorage.
+Lalu, saat ScrollRestoration atau RestoredScroll komponen mount,
+mereka akan mencari posisinya dari seesionStorage.
+
+Yang sedikit tricky untuk kita adalah mendefinisikan sebuah pilihan
+"opt-out" API untuk saat kita tidak menginginkan window scroll untuk 
+dimanaged. Contohnya, jika kita memiliki beberapa tab navigasi.

@@ -1,0 +1,14 @@
+.NavbarLogo img {
+    width: 20px; 
+    height: 20px;
+    margin-right: 2rem;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .NavbarLogo img {
+        // margin: 0px auto;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

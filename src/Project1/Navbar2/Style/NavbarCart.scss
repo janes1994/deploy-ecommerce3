@@ -1,0 +1,14 @@
+.NavbarCart img {
+    width: 22px; 
+    height: 22px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+    .NavbarCart img {
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+}
+

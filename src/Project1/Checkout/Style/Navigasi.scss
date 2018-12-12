@@ -1,0 +1,32 @@
+.checkout-navigasi {
+    display: flex;
+    font-size: .7rem;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    padding: 20px;
+    height: .5rem;
+}
+
+.navigasi-bulet {
+    padding: 3px 6.5px;
+    background: rgb(82, 150, 228);
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 4px;
+    margin-left: 1.5rem;
+}
+
+.navigasi-title {
+    margin-right: 3rem;
+}
+
+.navigasi-alamat-tujuan,
+.navigasi-metode-pengiriman,
+.navigasi-lakukan-pembayaran {
+    cursor: pointer;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
+}

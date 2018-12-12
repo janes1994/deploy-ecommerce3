@@ -1,0 +1,38 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F1F1F1;
+  padding: 1rem;
+}
+
+.footer .footer-socmed img {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer .footer-content span {
+  font-size: .8rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-weight: bold;
+}
+
+.footer .footer-copyright span {
+  color: #242424;
+  padding-bottom: -3rem;
+  font-size: .7rem;
+}
+/*# sourceMappingURL=Footer.css.map */

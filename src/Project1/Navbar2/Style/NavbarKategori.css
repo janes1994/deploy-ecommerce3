@@ -1,0 +1,54 @@
+.NavbarKategori {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.NavbarKategori ul li {
+  display: inline;
+  color: #D4D4D4;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  font-size: 0.8em;
+  cursor: pointer;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.NavbarKategori ul li:hover {
+  opacity: .6;
+}
+
+.NavbarKategori ul li a {
+  color: #D4D4D4;
+  text-decoration: none;
+}
+
+.NavbarKategori ul li a:visited {
+  color: #D4D4D4;
+}
+
+.NavbarKategori ul li a:active {
+  color: #1D86EF;
+}
+
+@media (max-width: 768px) {
+  .NavbarKategori {
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 2.8rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  .NavbarKategori ul li {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=NavbarKategori.css.map */

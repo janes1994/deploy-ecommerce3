@@ -1,0 +1,46 @@
+/*
+ * Mysql dengan node js
+ *
+ * 1. Install paket mysql dari npm
+ *    npm i --save mysql
+ * 2. Buat koneksi dengan method createConnection, berisi object
+ *    dengan key host, password, dan database.
+ *    Simpan dalam variabel
+ * 3. Buat koneksi database dengan method connect dari variabel 
+*/
+
+const express = require("express");
+const mysql = require("mysql");
+
+// Create connection
+const db = mysql.createConnection({
+  	host	 : 'localhost',
+	user	 : 'root',
+	password : '123456',
+	database : 'nodemysql'
+});
+
+// Connect
+db.connect((err) => {
+  if (err) {
+    throw err;
+  }else {
+     console.log('Mysql Connected');
+   }
+})
+
+const app = express();
+
+// Create DB
+app.get('/createdb', (req, res) => {
+	let sql = 'CREATE DATABASE nodemysql';
+	db.query(sql, (err, result) => {
+		if (err) throw err;
+		console.log(result);
+		res.send('Database created...');
+	});
+});
+
+app.listen('3000', () => {
+  console.log("Server runs on port 3000");
+});

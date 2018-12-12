@@ -1,0 +1,116 @@
+.kategori-page-container {
+  background: #000000;
+  color: antiquewhite;
+}
+
+.kategori-page-title {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.kategori-page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-left: 4rem;
+}
+
+.kategori-page-sidebar {
+  width: 20vw;
+  padding: 1rem;
+}
+
+.kategori-sidebar-merk {
+  margin-bottom: 1rem;
+}
+
+.kategori-sidebar-sku span {
+  display: block;
+  font-size: .7rem;
+  margin-top: .3rem;
+}
+
+.kategori-page-main {
+  margin-right: 2rem;
+  margin-top: 2rem;
+  width: 20vw;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+.kategori-main-image {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kategori-page-main .kategori-main-image img {
+  max-width: 200px;
+  max-height: 120px;
+}
+
+.kategori-main-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem;
+  height: 50%;
+}
+
+.kategori-main-desc .main-desc-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kategori-main-desc .main-desc-spec {
+  font-size: .7rem;
+}
+
+.kategori-main-desc .kategori-button-buy {
+  margin: 1rem;
+  padding: .7rem 6rem;
+  border-radius: 6px;
+  background: #C53418;
+  color: #E0E0E0;
+  border: none;
+}
+
+.kategori-main-desc .kategori-link-buy {
+  text-decoration: none;
+  color: #E0E0E0;
+  background: #C53418;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  padding: .7rem 2rem;
+  border-radius: 6px;
+  font-size: .8rem;
+}
+
+.kategori-page-main {
+  background: #0E0D0D;
+}
+/*# sourceMappingURL=Kategori.css.map */

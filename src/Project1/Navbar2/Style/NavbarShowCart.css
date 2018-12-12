@@ -1,0 +1,140 @@
+.NavbarShowCart {
+  width: 25vw;
+  min-height: 24rem;
+  background: #dbdbdb;
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: .8rem;
+  z-index: 99;
+}
+
+.NavbarShowCart .cart-belanja .belanja-kosong {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada2 .belanja-ada-content2 {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada2 .belanja-ada-content2 img.belanja-ada-img {
+  max-width: 75px;
+  max-height: 75px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada2 .belanja-ada-content2 span.belanja-ada-judul2 {
+  font-size: .7rem;
+  width: 50%;
+  margin-left: 12px;
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada2 .button-checkout2 {
+  height: 30px;
+  background: #5296e4;
+  color: whitesmoke;
+  border-radius: 8px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .9rem;
+  margin-top: 8px;
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "img title" "button button";
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada img {
+  max-width: 75px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada span.belanja-ada-judul {
+  font-size: .8rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+}
+
+.NavbarShowCart .cart-belanja .belanja-ada .button-checkout {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button;
+  height: 30px;
+  background: #5296e4;
+  color: whitesmoke;
+  border-radius: 8px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .9rem;
+  margin-top: 8px;
+}
+
+.NavbarShowCart .cart-kategori {
+  position: relative;
+  padding: 1rem;
+}
+
+.NavbarShowCart .cart-kategori ul {
+  list-style-type: none;
+}
+
+.NavbarShowCart .cart-kategori ul li {
+  color: #476eee;
+  margin: .5rem;
+  font-size: .9rem;
+}
+
+.NavbarShowCart .cart-kategori ul li a {
+  text-decoration: none;
+  color: #476eee;
+}
+
+.NavbarShowCart .cart-kategori ul li img {
+  width: 20px;
+  height: 20px;
+}
+
+.NavbarShowCart .cart-kategori hr {
+  border-bottom: none;
+  border-color: #f3f3f3;
+}
+/*# sourceMappingURL=NavbarShowCart.css.map */

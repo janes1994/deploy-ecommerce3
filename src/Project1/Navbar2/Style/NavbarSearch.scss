@@ -1,0 +1,12 @@
+.NavbarSearch img {
+    width: 22px; 
+    height: 22px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+@media(max-width: 768px) {
+    .NavbarSearch img {
+        display: none;
+    }
+}

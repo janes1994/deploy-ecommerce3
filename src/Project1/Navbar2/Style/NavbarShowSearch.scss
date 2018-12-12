@@ -1,0 +1,27 @@
+.NavbarShowSearch {
+    .closeSearch {
+        width: 28px; 
+        height: 28px;
+    }
+
+    input[type=text] {
+        width: 50vw;
+        height: 2rem;
+        border: none;
+        background: #323232;
+        align-items: center;
+        font-size: 1rem;
+        color: aliceblue;
+        margin-left: 6rem;
+        margin-right: 6rem;
+
+        &::placeholder {
+            color:rgb(182, 182, 182); 
+            font-size: 1rem;
+        }
+
+        &:focus {
+            outline: none;
+          }
+    }
+}

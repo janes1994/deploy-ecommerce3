@@ -1,0 +1,117 @@
+.pengiriman-container {
+    margin-left: 3rem;
+    padding: 1rem 2.5rem;
+    border: .6px solid black;
+    border-radius: 8px;
+    width: 55vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pengiriman-title-utama {
+    // margin-left: 2rem;
+    // margin-right: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: .9rem;
+    border-bottom: .6px solid black;
+}
+
+.form-pengiriman,
+.form-pemeberitahuan,
+.tabel-pengiriman {
+    margin-bottom: 1rem;
+}
+
+.form-pengiriman {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-size: .9rem;
+    
+    .form-pengiriman-style {
+        input[type=text] {
+            width: 100%;
+            padding: 12px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: .6px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: .1rem;
+          }
+          
+        .pengiriman-cekharga {
+            width: 25%;
+            background: rgb(82, 150, 228);
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          
+          .pengiriman-cekharga:hover {
+            background: rgb(82, 150, 228);
+          }
+    }
+}
+
+.form-pemberitahuan {
+    background: rgb(212, 212, 212);
+    padding: 1.5rem;
+    // width: fit-content;
+
+    .pemberitahuan-info {
+        display: flex;
+        width: 35%;
+        // justify-content: space-between;
+        // margin: 1rem;
+
+        .info-nilai {
+            // text-align: left;
+            // justify-content: left;
+        }
+    }
+}
+
+.tabel-pengiriman {
+    margin-top: 1rem;
+    // border: 1px solid black;
+    // padding: 1rem;
+    font-size: .9rem;
+
+    .tabel-pengiriman-style {
+        text-align: left;
+        border-collapse: collapse;
+        width: 100%;
+
+        td, th {
+            border: 1px solid #ddd;
+            padding: 6px;
+        }
+
+        tr:nth-child(even){background: #f2f2f2;}
+        tr:hover(even){background: #ddd;}
+
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        tbody tr {
+            cursor: pointer;
+
+            &:hover {
+                background: rgb(33, 132, 224);
+                opacity: .8;
+            }
+        }
+    }
+}
+
+.pemberitahuan-judul-pengiriman {
+    font-weight: bold;
+    font-size: .8rem;
+    margin-top: 24px;
+}

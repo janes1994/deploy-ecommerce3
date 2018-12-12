@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC,GAAG,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,YAAY,EAAE,IAAI;EAClB,UAAU,EAAE,GAAG;CAClB;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,WAAW,CAAC,GAAG,CAAC;IAEZ,YAAY,EAAE,CAAC;IACf,WAAW,EAAE,CAAC;GACjB",
+    "sources": [
+        "NavbarLogo.scss"
+    ],
+    "names": [],
+    "file": "NavbarLogo.css"
+}
